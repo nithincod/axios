@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "362459218801",
+    "project_id": "foodcalorie-d56ac",
+    "storage_bucket": "foodcalorie-d56ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362459218801:android:9c6274c71b95c28392acd0",
+        "android_client_info": {
+          "package_name": "com.example.codeui"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAL3eYU6BEUav6H6A5OqivsPyUvTP4E7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
