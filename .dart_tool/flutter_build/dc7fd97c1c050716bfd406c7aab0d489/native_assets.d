@@ -1,0 +1,1 @@
+ /Users/sagilinithin/Documents/foodify/.dart_tool/flutter_build/dc7fd97c1c050716bfd406c7aab0d489/native_assets.yaml: 

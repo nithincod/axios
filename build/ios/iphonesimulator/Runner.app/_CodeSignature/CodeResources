@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		uL4Ojb7G0dNQyE1gLYa/ws24LsU=
+		bfAJkcUWMiKDUVUfCackd1e9N28=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		97Gm1oZQb1MzYBDLxD63qQu6Ca4=
+		ynaaWn1VO91V6UFvJ9Fh1hJiIgc=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
-		nZOlV9cX8KiRJ90/R1E1BnWqyY8=
+		kNx4b7we75H8nfGCk9mvJTCEsvE=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -122,7 +122,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		Ce60KZAesltAg8iytAurh4j5oTE=
+		ASEgvbH6x5dbk2/7WJCpyqcYSWo=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -528,6 +528,26 @@
 		<data>
 		U7WM6H59FffP9Htm/es+F6Fe4q4=
 		</data>
+		<key>Frameworks/image_picker_ios.framework/Info.plist</key>
+		<data>
+		qcLhYtv1jV6R3ntDF9yjFg3ofA4=
+		</data>
+		<key>Frameworks/image_picker_ios.framework/_CodeSignature/CodeResources</key>
+		<data>
+		d73YaV0vTfioW0qEED4be+sVaBc=
+		</data>
+		<key>Frameworks/image_picker_ios.framework/image_picker_ios</key>
+		<data>
+		Ci7rmQ0clh//pLdftq3A60Lv0UA=
+		</data>
+		<key>Frameworks/image_picker_ios.framework/image_picker_ios_privacy.bundle/Info.plist</key>
+		<data>
+		ZqLI89eQdc2gUaAz1KeDlVSv9vs=
+		</data>
+		<key>Frameworks/image_picker_ios.framework/image_picker_ios_privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		/LX0ZlwxwIAIhjZaDB8EiH5KpXA=
+		</data>
 		<key>Frameworks/leveldb.framework/Info.plist</key>
 		<data>
 		goh6TFBGPJKg5zlPS5q2CWZCexw=
@@ -697,7 +717,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			n6/+l3Fw+cgI9NYnwMKecPFy4P7LA88VkhCPbrj3Y1M=
+			N2X+hHhNmKO1ttYS0WLc6BDn+bpcCpm11U0ZkPQkD/k=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -711,7 +731,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SyZxuQhT9f+BcmluPR8f7NRGyu15RfIkBZiM2+WQy+8=
+			BhkWtgKQw1/ApmDNfL0B7zbqkdypTmEz7BMQcnJOFr4=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
@@ -739,7 +759,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mhmTAdSqPm30QscP2Xo4jApYW9IZ7hsAo1Woquw2Dk4=
+			NEioAGrJSILwx0zLWBEj93bbb7WU2V2oeClDl/OYyoo=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -830,7 +850,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			INVvsGCrcCK2BW4ZbzRL1TM7t0GuAefrU69QMKovsOE=
+			7GKfZ2ec4nS3UVKtpmjC8neufBgeRhSBJ5WsRsxmitE=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -1538,6 +1558,41 @@
 			<key>hash2</key>
 			<data>
 			SMwLNyeKt9zx4V4Bagi8Dg1kPZyuLQYcTZQlPy1SyIo=
+			</data>
+		</dict>
+		<key>Frameworks/image_picker_ios.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			l0TmJTo9Wtk5hdgI/dZnsGqvPXTAoKj74M2uBWMUY0A=
+			</data>
+		</dict>
+		<key>Frameworks/image_picker_ios.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			TEIZ7woDDez7VCUiQi8vMO2qAxH0BFpZ5w+N50BVmkY=
+			</data>
+		</dict>
+		<key>Frameworks/image_picker_ios.framework/image_picker_ios</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6CjkdKQ6/BBd3zXSadtgt7SD6TFZ7wmikDxdaujhfHc=
+			</data>
+		</dict>
+		<key>Frameworks/image_picker_ios.framework/image_picker_ios_privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/9nvHIxnYxz6BrnMknS5lfQamTUl0IAWUjdS8wdU25E=
+			</data>
+		</dict>
+		<key>Frameworks/image_picker_ios.framework/image_picker_ios_privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			bS2g2NkwIn1CjB2TY7CtbjoS4sm2jFzilxWKdBL8jDE=
 			</data>
 		</dict>
 		<key>Frameworks/leveldb.framework/Info.plist</key>

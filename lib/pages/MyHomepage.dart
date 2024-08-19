@@ -1,4 +1,6 @@
 import 'package:codeui/pages/HomeScreen.dart';
+import 'package:codeui/pages/ProfileScreen.dart';
+import 'package:codeui/pages/imagePickerScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -17,8 +19,8 @@ class _MyHomepageState extends State<MyHomepage> {
 
   static final List<Widget> _screens = [
     HomeScreen(),
-    CameraScreen(),
-    ProfileScreen(),
+    ImagePickerScreen(),
+    profileScreen(),
   ];
   void _onItemTapped(int index) {
     setState(() {
@@ -35,8 +37,8 @@ class _MyHomepageState extends State<MyHomepage> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               buildNavBarItem(CupertinoIcons.home, 'Home', 0),
-              buildNavBarItem(CupertinoIcons.camera, 'Camera', 2),
-              buildNavBarItem(CupertinoIcons.profile_circled, 'Profile', 3),
+              buildNavBarItem(CupertinoIcons.camera, 'Camera', 1),
+              buildNavBarItem(CupertinoIcons.profile_circled, 'Profile', 2),
             ],
           ),
         ));
