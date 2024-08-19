@@ -1,7 +1,17 @@
 # This is a generated file; do not edit or check into version control.
+camera=/Users/sagilinithin/.pub-cache/hosted/pub.dev/camera-0.11.0+2/
+camera_android_camerax=/Users/sagilinithin/.pub-cache/hosted/pub.dev/camera_android_camerax-0.6.5+2/
+camera_avfoundation=/Users/sagilinithin/.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.17+3/
+camera_web=/Users/sagilinithin/.pub-cache/hosted/pub.dev/camera_web-0.3.5/
 cloud_firestore=/Users/sagilinithin/.pub-cache/hosted/pub.dev/cloud_firestore-5.2.1/
 cloud_firestore_web=/Users/sagilinithin/.pub-cache/hosted/pub.dev/cloud_firestore_web-4.1.1/
 firebase_auth=/Users/sagilinithin/.pub-cache/hosted/pub.dev/firebase_auth-5.1.4/
 firebase_auth_web=/Users/sagilinithin/.pub-cache/hosted/pub.dev/firebase_auth_web-5.12.5/
 firebase_core=/Users/sagilinithin/.pub-cache/hosted/pub.dev/firebase_core-3.3.0/
 firebase_core_web=/Users/sagilinithin/.pub-cache/hosted/pub.dev/firebase_core_web-2.17.4/
+flutter_plugin_android_lifecycle=/Users/sagilinithin/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.19/
+path_provider=/Users/sagilinithin/.pub-cache/hosted/pub.dev/path_provider-2.1.4/
+path_provider_android=/Users/sagilinithin/.pub-cache/hosted/pub.dev/path_provider_android-2.2.4/
+path_provider_foundation=/Users/sagilinithin/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.0/
+path_provider_linux=/Users/sagilinithin/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
+path_provider_windows=/Users/sagilinithin/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
