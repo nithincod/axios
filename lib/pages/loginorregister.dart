@@ -8,7 +8,7 @@ import 'register_page.dart';
 
 class LoginOrRegister extends StatefulWidget {
   const LoginOrRegister({Key? key}) : super(key: key);
-
+  
   @override
   State<LoginOrRegister> createState() => _LoginOrRegisterState();
 }
@@ -25,7 +25,7 @@ class _LoginOrRegisterState extends State<LoginOrRegister> {
   @override
   Widget build(BuildContext context) {
     if(isLogin){
-      return LoginPage(OnTap: togglePage);
+      return LoginScreen(OnTap: togglePage);
     }
     else{
       return RegisterPage( OnTap: togglePage,);

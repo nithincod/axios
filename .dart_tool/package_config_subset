@@ -118,6 +118,10 @@ flutter_plugin_android_lifecycle
 3.2
 file:///Users/sagilinithin/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.19/
 file:///Users/sagilinithin/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.19/lib/
+graphs
+2.18
+file:///Users/sagilinithin/.pub-cache/hosted/pub.dev/graphs-2.3.1/
+file:///Users/sagilinithin/.pub-cache/hosted/pub.dev/graphs-2.3.1/lib/
 http
 3.3
 file:///Users/sagilinithin/.pub-cache/hosted/pub.dev/http-1.2.2/
@@ -226,6 +230,14 @@ plugin_platform_interface
 3.0
 file:///Users/sagilinithin/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8/
 file:///Users/sagilinithin/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8/lib/
+rive
+2.17
+file:///Users/sagilinithin/.pub-cache/hosted/pub.dev/rive-0.13.12/
+file:///Users/sagilinithin/.pub-cache/hosted/pub.dev/rive-0.13.12/lib/
+rive_common
+2.17
+file:///Users/sagilinithin/.pub-cache/hosted/pub.dev/rive_common-0.4.10/
+file:///Users/sagilinithin/.pub-cache/hosted/pub.dev/rive_common-0.4.10/lib/
 source_span
 2.18
 file:///Users/sagilinithin/.pub-cache/hosted/pub.dev/source_span-1.10.0/
