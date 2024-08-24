@@ -4,6 +4,8 @@ import 'package:flutter/widgets.dart';
 
 import 'package:rive/rive.dart';
 
+import '../components/Mybutton.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key, this.OnTap});
   final void Function()? OnTap;
@@ -22,24 +24,18 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
-  void Login(BuildContext context) {
-    try{
-       if(!emailController.text.isEmpty && !passwordController.text.isEmpty){
-         AuthService authService = AuthService();
-          authService.signInWithEmailAndPassword(emailController.text, passwordController.text);
-       }
-       else{
-         ScaffoldMessenger.of(context).showSnackBar(
-           SnackBar(
-             content: Text("Please fill all the fields"),
-           ),
-         );
-       }
-    }
-    catch(e){
+  void login(BuildContext context) async {
+
+    AuthService authService = AuthService();
+    try {
+      await authService.signInWithEmailAndPassword(
+        emailController.text,
+        passwordController.text,
+      );
+    } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(e.toString()),
+          content: Text('Must enter details'),
         ),
       );
     }
@@ -58,25 +54,38 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const Text(
+                "Login",
+                style: TextStyle(
+                  fontSize: 32,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
               //rive animation
               SizedBox(
-                width: size.width,
-                height: 200,
-                child: RiveAnimation.asset(
-                  "/Users/sagilinithin/axios/images/animated_login_character.riv",
-                  stateMachines: const ["Login Machine"],
-                  onInit: (artboard) {
-                    controller = StateMachineController.fromArtboard(
-                        artboard, "Login Machine");
-                    if (controller == null) return;
+  width: size.width,
+  height: 200,
+  child: RiveAnimation.asset(
+    "images/animated_login_character.riv", // Update the asset path
+    fit: BoxFit.contain, // Adjust the fit of the animation
+    animations: const ["idle"], // Set the initial animation
+    stateMachines: const ["Login Machine"], // Set the state machines
+    onInit: (artboard) {
+      controller = StateMachineController.fromArtboard(
+        artboard,
+        "Login Machine",
+      );
+      if (controller == null) return;
 
-                    artboard.addController(controller!);
-                    isChecking = controller?.findInput("isChecking");
-                    isHandsUp = controller?.findInput("isHandsUp");
-                    trigSuccess = controller?.findInput("trigSuccess");
-                    trigFail = controller?.findInput("trigFail");
-                  },
-                ),
+      artboard.addController(controller!);
+      isChecking = controller?.findInput("isChecking");
+      isHandsUp = controller?.findInput("isHandsUp");
+      trigSuccess = controller?.findInput("trigSuccess");
+      trigFail = controller?.findInput("trigFail");
+    },
+  ),
+
               ),
 
               const SizedBox(height: 10),
@@ -89,7 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   isChecking!.change(true);
                 },
-                keyboardType: TextInputType.emailAddress,
+                
                 controller: emailController,
                 decoration: InputDecoration(
                   hintText: "E mail",
@@ -110,7 +119,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   isHandsUp!.change(true);
                 },
                 controller: passwordController,
-                obscureText: true, // to hide password
+                obscureText: true,
                 decoration: InputDecoration(
                   hintText: "Password",
                   prefixIcon: const Icon(Icons.lock),
@@ -122,20 +131,7 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 10),
 
               const SizedBox(height: 10),
-              MaterialButton(
-                minWidth: size.width,
-                height: 50,
-                color: Colors.purple,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
-                onPressed: () {
-                  Login(context);
-                },
-                child: const Text(
-                  "Login",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
+              MyButton(ontap: () => login(context), text: "Login"),
               const SizedBox(height: 10),
               SizedBox(
                 width: size.width,

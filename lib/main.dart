@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:codeui/services/auth_gate.dart';
 import 'package:codeui/utils/constants.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -5,9 +7,10 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http; // Import the http package
 import 'firebase_options.dart';
 import 'pages/toppage.dart';
+import 'package:html/parser.dart' as html_parser;
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  await WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
@@ -23,27 +26,35 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    loadData(); // Call loadData when the app starts
+     // Call loadData when the app starts
   }
+  
+Future<String?> fetchCalories(String prediction) async {
+  try {
+    // Construct the URL for the Google search
+    final url = 'https://www.google.com/search?q=calories+in+$prediction';
 
-  Future<void> loadData() async {
-    String url = "https://api.calorieninjas.com/v1/nutrition?query=10oz onion and a tomato";
-    String apiKey = 'YOUR_API_KEY'; // Ensure to use quotes for the API key
+    // Make the GET request
+    final response = await http.get(Uri.parse(url));
 
-    try {
-      var response = await http.get(Uri.parse(url), headers: {
-        "X-Api-Key": apiKey,
-      });
-
-      if (response.statusCode == 200) {
-        print(response.body); // Print the response body if successful
+    // Check if the request was successful
+    if (response.statusCode == 200) {
+      // Parse the HTML response
+      var document = html_parser.parse(response.body);
+      // Find the element containing calorie information
+      var caloriesElement = document.querySelector("div.BNeawe.iBp4i.AP7Wnd");
+      if (caloriesElement != null) {
+        return caloriesElement.text; // Return the calorie text
       } else {
-        print('Failed to load data: ${response.statusCode}');
+        return "Calories information not found.";
       }
-    } catch (e) {
-      print('Error occurred: $e'); // Handle errors gracefully
+    } else {
+      return "Failed to fetch data: ${response.statusCode}";
     }
+  } catch (e) {
+    return "Error occurred: $e";
   }
+}
 
   @override
   Widget build(BuildContext context) {

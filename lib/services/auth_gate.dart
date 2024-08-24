@@ -2,7 +2,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import '../pages/MyHomepage.dart';
+import '../pages/Screens.dart';
 import '../pages/loginorregister.dart';
 
 class Authgate extends StatelessWidget {

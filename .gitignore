@@ -1,0 +1,81 @@
+# Miscellaneous
+*.lock
+*.log
+*.tmp
+*.temp
+*.swp
+.DS_Store
+*.class
+*.jar
+*.war
+*.ear
+*.db
+
+# Flutter/Dart related
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+build/
+.idea/
+.vscode/
+android/.gradle/
+android/app/key.properties
+android/local.properties
+
+# iOS related
+ios/Flutter/Generated.xcconfig
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/flutter_export_environment.sh
+
+# Web related
+web/.dart_tool/
+web/packages
+web/flutter.js
+web/flutter_service_worker.js
+
+# Windows related
+windows/flutter/ephemeral/
+windows/CMakeLists.txt
+
+# Linux related
+linux/flutter/ephemeral/
+linux/CMakeLists.txt
+
+# macOS related
+macos/Flutter/ephemeral/
+macos/CMakeLists.txt
+
+# IntelliJ related
+*.iml
+.idea/workspace.xml
+.idea/libraries
+.idea/modules.xml
+.idea/.name
+.idea/misc.xml
+.idea/modules.xml
+*.ipr
+*.iws
+
+# VS Code related
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/*.code-workspace
+
+# Android Studio related
+*.iml
+*.idea
+
+# Generated plugin files
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+
+build/
+
+.DS_Store

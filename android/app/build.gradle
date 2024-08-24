@@ -1,7 +1,7 @@
 plugins {
     id "com.android.application"
     // START: FlutterFire Configuration
-    id 'com.google.gms.google-services'
+    id 'com.google.gms.google-services' // Ensure you have the correct version in the project-level build.gradle
     // END: FlutterFire Configuration
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
@@ -26,8 +26,9 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.example.codeui"
-    compileSdkVersion flutter.compileSdkVersion
+    namespace "com.example.codeui" // Update this to your package name
+    compileSdkVersion 34 // Update to 34 or later
+
     ndkVersion flutter.ndkVersion
 
     compileOptions {
@@ -44,22 +45,22 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.codeui"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdkVersion flutter.minSdkVersion
-        targetSdkVersion flutter.targetSdkVersion
+        applicationId "com.example.codeui" // Ensure this matches your app ID
+        minSdkVersion 23 // Keep as per your requirement
+        targetSdkVersion 34 // Update to 34 or later
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.debug // Update this for release signing
         }
+    }
+
+    aaptOptions {
+        noCompress 'tflite'
+        noCompress 'lite'
     }
 }
 
@@ -67,4 +68,11 @@ flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+    // Import the BoM for the Firebase platform
+    implementation(platform("com.google.firebase:firebase-bom:33.0.0")) // Use the latest version as needed
+    // Add dependencies for Firebase products you want to use
+    implementation("com.google.firebase:firebase-analytics")
+    // Add other Firebase dependencies as needed
+}
+
