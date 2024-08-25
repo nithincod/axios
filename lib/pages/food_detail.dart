@@ -21,13 +21,17 @@ class FoodDetail extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset(
-              food.image, 
-              height: MediaQuery.of(context).size.height * 0.3, 
-              width: MediaQuery.of(context).size.width,
-              
-              ),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.1 ),
+            Card(
+              elevation: 5,
+              child: Image.asset(
+                food.image, 
+                height: MediaQuery.of(context).size.height * 0.3, 
+                width: MediaQuery.of(context).size.width,
+                
+                
+                ),
+            ),
+            
             Center(
               child: Text('Calories🔥🔥: ${food.calories} ', 
               style: TextStyle(
@@ -36,8 +40,14 @@ class FoodDetail extends StatelessWidget {
                 color: Color.fromARGB(255, 27, 27, 27))
                 )
                 ),
-            SizedBox(height: 16),
-            NutritionalRings(food: food),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.1 ),
+            Container(
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 170, 169, 171),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: NutritionalRings(food: food),
+              ),
           ],
         ),
       ),
