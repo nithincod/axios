@@ -368,6 +368,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "percent_indicator",
+      "rootUri": "file:///Users/sagilinithin/.pub-cache/hosted/pub.dev/percent_indicator-4.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "platform",
       "rootUri": "file:///Users/sagilinithin/.pub-cache/hosted/pub.dev/platform-3.1.5",
       "packageUri": "lib/",
@@ -482,7 +488,7 @@
       "languageVersion": "3.1"
     }
   ],
-  "generated": "2024-08-24T06:48:23.659869Z",
+  "generated": "2024-08-25T05:43:46.639768Z",
   "generator": "pub",
   "generatorVersion": "3.3.3"
 }

@@ -32,8 +32,8 @@ class _ImagePickerScreenState extends State<ImagePickerScreen> {
     Tflite.close();
     try {
       String? res = await Tflite.loadModel(
-        model: "assets/model_unquant.tflite",
-        labels: "assets/labels2.txt",
+        model: "assets/MyFoodClassifier.tflite",
+        labels: "assets/labels.txt",
       );
       if (res == null) {
         throw Exception('Model loading failed');
@@ -196,11 +196,11 @@ class _ImagePickerScreenState extends State<ImagePickerScreen> {
                     Image.file(
                       imageFile!,
                       fit: BoxFit.cover,
-                      height: 200,
-                      width: 200,
+                      height: MediaQuery.of(context).size.height * 0.4,
+                      width: MediaQuery.of(context).size.width,
                       
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 0),
                     Expanded(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -230,7 +230,7 @@ class _ImagePickerScreenState extends State<ImagePickerScreen> {
                                     const CircularProgressIndicator(),
                                   if (!isLoading && calories.isNotEmpty)
                                     Text(
-                                      "Estimated Calories: $calories",
+                                      "Estimated Calories per 100 g: $calories",
                                       style: const TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold,

@@ -25,7 +25,6 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController passwordController = TextEditingController();
 
   void login(BuildContext context) async {
-
     AuthService authService = AuthService();
     try {
       await authService.signInWithEmailAndPassword(
@@ -40,6 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
       );
     }
   }
+
 //
   @override
   Widget build(BuildContext context) {
@@ -62,32 +62,29 @@ class _LoginScreenState extends State<LoginScreen> {
                   color: Colors.white,
                 ),
               ),
-              //rive animation
               SizedBox(
-  width: size.width,
-  height: 200,
-  child: RiveAnimation.asset(
-    "images/animated_login_character.riv", // Update the asset path
-    fit: BoxFit.contain, // Adjust the fit of the animation
-    animations: const ["idle"], // Set the initial animation
-    stateMachines: const ["Login Machine"], // Set the state machines
-    onInit: (artboard) {
-      controller = StateMachineController.fromArtboard(
-        artboard,
-        "Login Machine",
-      );
-      if (controller == null) return;
+                width: size.width,
+                height: 200,
+                child: RiveAnimation.asset(
+                  "images/animated_login_character.riv",
+                  fit: BoxFit.contain,
+                  animations: const ["idle"],
+                  stateMachines: const ["Login Machine"],
+                  onInit: (artboard) {
+                    controller = StateMachineController.fromArtboard(
+                      artboard,
+                      "Login Machine",
+                    );
+                    if (controller == null) return;
 
-      artboard.addController(controller!);
-      isChecking = controller?.findInput("isChecking");
-      isHandsUp = controller?.findInput("isHandsUp");
-      trigSuccess = controller?.findInput("trigSuccess");
-      trigFail = controller?.findInput("trigFail");
-    },
-  ),
-
+                    artboard.addController(controller!);
+                    isChecking = controller?.findInput("isChecking");
+                    isHandsUp = controller?.findInput("isHandsUp");
+                    trigSuccess = controller?.findInput("trigSuccess");
+                    trigFail = controller?.findInput("trigFail");
+                  },
+                ),
               ),
-
               const SizedBox(height: 10),
               TextField(
                 onChanged: (value) {
@@ -98,7 +95,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   isChecking!.change(true);
                 },
-                
                 controller: emailController,
                 decoration: InputDecoration(
                   hintText: "E mail",
@@ -129,7 +125,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               const SizedBox(height: 10),
-
               const SizedBox(height: 10),
               MyButton(ontap: () => login(context), text: "Login"),
               const SizedBox(height: 10),
