@@ -21,7 +21,7 @@ class Food {
 
   static List<Food> getFoodList() {
     return [
-      // Fast Foods
+     
       Food(
         id: 24,
         name: 'Burger',
@@ -73,7 +73,7 @@ class Food {
         image: 'images/french_fries.png',
       ),
 
-      // Dinner Items
+      
       Food(
         id: 29,
         name: 'Grilled Salmon',
@@ -125,7 +125,7 @@ class Food {
         image: 'images/chicken_curry.png',
       ),
 
-      // Fruits
+      
       Food(
         id: 1,
         name: 'Apple',

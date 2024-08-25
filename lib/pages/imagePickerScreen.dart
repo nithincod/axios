@@ -1,10 +1,8 @@
-// ignore_for_file: deprecated_member_use
-
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:tflite/tflite.dart';
-import 'package:http/http.dart' as http; // Import the http package
+import 'package:http/http.dart' as http; 
 import 'package:html/parser.dart' as html_parser;
 
 class ImagePickerScreen extends StatefulWidget {
@@ -105,11 +103,7 @@ class _ImagePickerScreenState extends State<ImagePickerScreen> {
     try {
      
       final url = 'https://www.google.com/search?q=calories+in+$prediction';
-
-      
-      final response = await http.get(Uri.parse(url));
-
-      
+      final response = await http.get(Uri.parse(url));    
       if (response.statusCode == 200) {
         
         var document = html_parser.parse(response.body);

@@ -32,7 +32,7 @@ class AuthService {
       UserCredential userCredential = await _firebaseAuth
           .createUserWithEmailAndPassword(email: email, password: password);
 
-      //after creating the user, create a new document for the user in the users collection
+      
       await _fireStore.collection('users').doc(userCredential.user!.uid).set({
         'uid': userCredential.user!.uid,
         'email': email,

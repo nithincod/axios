@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http; // Import the http package
+import 'package:http/http.dart' as http;
 import 'package:html/parser.dart' as html_parser;
 
 class CalorieCounterScreen extends StatefulWidget {
@@ -27,7 +27,7 @@ class _CalorieCounterScreenState extends State<CalorieCounterScreen> {
         var caloriesElement = document.querySelector("div.BNeawe.iBp4i.AP7Wnd");
         if (caloriesElement != null) {
           setState(() {
-            calories = caloriesElement.text.replaceAll(RegExp(r'[^0-9]'), ''); // Extract only numbers
+            calories = caloriesElement.text.replaceAll(RegExp(r'[^0-9]'), ''); 
           });
         } else {
           setState(() {
@@ -127,16 +127,15 @@ class _CalorieCounterScreenState extends State<CalorieCounterScreen> {
               },
             ),
             const SizedBox(height: 20),
-            // Loading indicator
+            
             if (isLoading) CircularProgressIndicator(),
             const SizedBox(height: 20),
-            // Display calorie information
             Text(
               'Calories per 100g: $calories',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 20),
-            // Display total calories
+            
             Text(
               'Total Calories: $result',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),

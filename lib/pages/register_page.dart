@@ -60,7 +60,7 @@ class _RegisterPageState extends State<RegisterPage> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  // Logo
+                  
                   const SizedBox(
                     height: 85,
                   ),
@@ -71,7 +71,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   const SizedBox(
                     height: 20,
                   ),
-                  // Message
+                  
                   const Text(
                     "Let's create an account for you!",
                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
@@ -79,7 +79,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   SizedBox(
                     height: 24,
                   ),
-                  // Email
+                  
                   MyTextField(
                     hinttext: 'Email',
                     unknowntext: false,
@@ -89,14 +89,14 @@ class _RegisterPageState extends State<RegisterPage> {
                   const SizedBox(
                     height: 30,
                   ),
-                  // Password
+                  
                   MyTextField(
                     hinttext: 'Password',
                     unknowntext: true,
                     controller: PassController, 
                     labeltext: 'Password',
                   ),
-                  // Confirm Password
+                  
                   const SizedBox(
                     height: 20,
                   ),
