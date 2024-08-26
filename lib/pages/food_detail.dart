@@ -41,13 +41,7 @@ class FoodDetail extends StatelessWidget {
                 )
                 ),
             SizedBox(height: MediaQuery.of(context).size.height * 0.1 ),
-            Container(
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 170, 169, 171),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: NutritionalRings(food: food),
-              ),
+            NutritionalRings(food: food),
           ],
         ),
       ),

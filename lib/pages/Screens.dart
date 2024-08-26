@@ -36,9 +36,9 @@ class _MyHomepageState extends State<MyHomepage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              buildNavBarItem(CupertinoIcons.home, 'Home', 0),
-              buildNavBarItem(CupertinoIcons.camera, 'Camera', 1),
-              buildNavBarItem(CupertinoIcons.plus, 'counter', 2),
+              buildNavBarItem(Icons.home, 'Home', 0),
+              buildNavBarItem(Icons.camera, 'Camera', 1),
+              buildNavBarItem(Icons.add, 'counter', 2),
             ],
           ),
         ));
